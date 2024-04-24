@@ -1,7 +1,12 @@
+using Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<TurneroContext>
+    (options => options.UseMySql(builder.Configuration.GetConnectionString("Conexion"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.2-mysql")));
 
 var app = builder.Build();
 
