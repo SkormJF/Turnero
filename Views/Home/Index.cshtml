@@ -1,8 +1,29 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-5" style="padding: 60px;">
+                <div class="text-center">
+                    <div class="form-group mb-2">
+                        <label>@DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")</label>
+                    </div>
+                    <h2>Ingresa el numero de documento</h2>
+                    <div class="form-group mb-2 mt-4" >
+                        <select id="" class="form-select">
+                            <option value="" disabled selected>Selecciona un tipo de documento</option>
+                            <option value="cedula">Cedula de ciudadania</option>
+                            <option value="identidad">Tarjeta de identidad</option>
+                            <option value="extranjeria">Cedula de extranjeria</option>
+                            <option value="registro">Registro civil</option>
+                            <option value="pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2 mt-5">
+                        <input  class="form-control" placeholder="Numero de documento">
+                        <span class="text-danger"></span>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-5">Ingresar</button
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
