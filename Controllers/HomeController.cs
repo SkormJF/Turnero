@@ -6,26 +6,32 @@ namespace CSharp.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
+    //Angelica
     public IActionResult Index()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    //Laura
+    public IActionResult Categorias()
     {
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    //David 
+    public IActionResult Turno()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View();
     }
+
+
+    //Daniel
+    public IActionResult Turnos()
+    {
+        return View();
+    }
+
+
+
 }
