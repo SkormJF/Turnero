@@ -31,8 +31,16 @@ public class HomeController : Controller
 
 
     //David 
-    public IActionResult Turno()
+    public async Task<IActionResult> Turno(string siglas)
     {
+        string seleccion = "";
+        string turno = "";
+        var result = await _context.Categorias.FirstOrDefaultAsync(c => c.Siglas == siglas);
+        int contador = result.Contador +1;
+
+        turno = siglas+"-"+(contador < 10 ? "00"+contador: "0"+contador);
+
+        ViewBag.Turno = turno;
         return View();
     }
 
