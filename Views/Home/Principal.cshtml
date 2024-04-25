@@ -1,44 +1,47 @@
+@{
+    ViewData["Home"] = "Principal Page";
+    <link rel="stylesheet" href="~/css/Principal.css" asp-append-version="true" />
+}
+
 <div class="container">
     <div class="row">
-        <div class="col-8">
-            <div class="card text-center mt-5" style=" border: none">
-                <div class="d-inline-flex col-12">
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Gestion de turnos y citas</a>
-                    </div>
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Historial de turnos</a>
-                    </div>
+        <div class="d-flex">
+            <div class="col-8  m-2">
+                <div class="d-flex justify-content-between p-2 m-4">
+                    <a type="button" class="btn option btn-sm btn-primary shadow" asp-controller="Home" asp-action="">Gestión de turnos y citas</a>
+                    <a type="button" class="btn option2 btn-sm btn-outline-dark shadow" asp-controller="Home" asp-action=""> Historial de turno</a>
                 </div>
-                <div class="d-inline-flex col-12 mt-5 p-4">
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-info" asp-controller="Home" asp-action="">Llamar turno especifico</a>
-                    </div>
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-success" asp-controller="Home" asp-action="">Llamar</a>
-                    </div>
+
+                <div class="d-flex justify-content-between p-2">
+                    <a type="button" class="btn opcion1 btn-info" asp-controller="Home" asp-action="">Llamar turno especifico</a>
+                    <a type="button" class="btn opcion1 btn-success" asp-controller="Home" asp-action="">Llamar</a>
                 </div>
-                <div class="d-inline-flex col-12 mt-5">
-                   <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-warning" asp-controller="Home" asp-action="">Crear</a>
-                    </div>
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-danger" asp-controller="Home" asp-action="">Reusar</a>
-                    </div>
+
+                <div class="d-flex justify-content-between p-2">
+                    <a type="button" class="btn opcion1 btn-warning" asp-controller="Home" asp-action="">Crear</a>
+                    <a type="button" class="btn opcion1 btn-danger" asp-controller="Home" asp-action="">Reusar</a>
                 </div>
-                <div class="d-inline-flex col-12 mt-5">
-                    <div class="form-group text-center col-6">
-                        <a type="button" class="btn btn-secondary" asp-controller="Home" asp-action="">Pausar</a>
-                    </div>
+
+                <div class="d-flex justify-content-center p-2">
+                    <a type="button" class="btn opcion1 btn-secondary" asp-controller="Home" asp-action="">Pausar</a>
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="card shadow mt-5">
-                    <div class="card-body">
-                        <div class="form-group text-end">
-                            <p>Turnos en espera: 15</p>
+
+                <div class="d-flex justify-content-around p-2">
+                    <a type="button" class="btn option3 btn-primary shadow" asp-controller="Home" asp-action="">Modulo 1</a>
+                    <a type="button" class="btn option3 btn-primary shadow asp-controller="Home" asp-action="">Modulo 2</a>
+                    <a type="button" class="btn option3 btn-primary shadow asp-controller="Home" asp-action="">Modulo 3</a>
+                    <a type="button" class="btn option3 btn-primary shadow asp-controller="Home" asp-action="">Modulo 4</a>
+                    <a type="button" class="btn option3 btn-primary shadow asp-controller="Home" asp-action="">Modulo 5</a>
+                </div>
+             </div>
+
+            <div class="col-4 tablero mt-5">
+                    <div class="card-body p-1 ">
+                        <div class="d-flex justify-content-center align-items-center mb-5 p-2">
+                            <p class="turnod me-4">Turnos disponibles</p>
+                            <p class="turnoe ms-2">Turnos en espera: 29</p>
                         </div>
-                        <table class="table table-striped">
+                        <table class="table table-striped ">
                             <thead>
                                 <tr>
                                     <th>Servicio</th>
@@ -64,32 +67,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                    </div>                
             </div>
+
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card text-center " style=" border: none">
-                        <div class="d-inline-flex col-12 mt-5">
-                            <div class="form-group text-center col-2">
-                                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Modulo 1</a>
-                            </div>
-                            <div class="form-group text-center col-2">
-                                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Modulo 2</a>
-                            </div>
-                            <div class="form-group text-center col-2">
-                                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Modulo 3</a>
-                            </div>
-                            <div class="form-group text-center col-2">
-                                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Modulo 4</a>
-                            </div>
-                            <div class="form-group text-center col-2">
-                                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="">Modulo 5</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
