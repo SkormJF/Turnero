@@ -25,9 +25,12 @@ public class HomeController : Controller
         return View();
     }
 
-
     //Daniel
     public IActionResult Turnos()
+    {
+        return View();
+    }
+    public IActionResult Principal()
     {
         return View();
     }
