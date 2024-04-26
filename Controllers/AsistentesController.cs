@@ -51,4 +51,8 @@ public class AsistentesController : Controller
         ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos");
         return View("Index");
     }
+      public IActionResult Principal()
+    {
+        return View();
+    }
 }
