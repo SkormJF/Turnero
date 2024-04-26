@@ -41,5 +41,9 @@ public class HomeController : Controller
     {
         return View();
     }
+     public IActionResult Pausar()
+    {
+        return View();
+    }
 
 }
