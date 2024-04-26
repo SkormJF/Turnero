@@ -46,13 +46,22 @@ public class AsistentesController : Controller
             var main = new ClaimsPrincipal(asistenteIdentity);
             HttpContext.Response.Cookies.Append("Asistente_Id", asistente.Id.ToString());
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, main);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Principal", "Asistentes");
         }
         ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos");
         return View("Index");
     }
-      public IActionResult Principal()
+      public async Task<IActionResult> Principal()
     {
+        var resultTurnos = await _context.Turnos.ToListAsync();
+
+        ViewBag.Total = resultTurnos.Where(t => t.Estado.Equals("En Espera")).Count();
+        //ViewBag.Pendientes = resultTurnos.Where(t => t.Estado.Equals("Pendientes")).Count();
+
+        ViewBag.Categorias = resultTurnos.Where(t => t.Estado.Equals("En Espera")).Select(c => new {c.Categoria, }).GroupBy(e=> e.Categoria).ToList();
+
+        return Json(ViewBag.Categorias);
+        
         return View();
     }
 }
