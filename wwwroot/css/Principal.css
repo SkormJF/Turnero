@@ -1,0 +1,54 @@
+.opcion1 {
+    width: 300px;
+    color: white !important;
+    margin: 10px;
+    font-size: 25px;
+    border: 2px solid black !important;
+}
+
+.option2{
+    display: flex;
+    width: 200px;
+    border: 2px solid black !important;
+    margin: 10px;
+}
+
+.option{
+    display: flex;
+    width: 200px;
+    color: white !important;
+    border: 2px solid black !important;
+    margin: 10px;
+}
+
+.option3{
+    display: flex;
+    width: 200px;
+    color: white !important;
+    border: 2px solid black !important;
+    margin: 10px;
+}
+
+.table{
+    border: 2px solid black !important;
+    height: 45vh;
+}
+
+.tablero{
+    margin-bottom: 25px;
+    border: 2px solid black !important;
+}
+
+.turnod{
+    background-color: yellow !important;
+    width: 100px;
+    text-align: center !important;
+    font-weight: bold;
+    border-radius: 70%;
+    font-size: 12px;
+}
+
+.turnoe{
+    font-size: 20px;
+}
+
