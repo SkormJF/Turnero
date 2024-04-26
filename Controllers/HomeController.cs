@@ -56,11 +56,9 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Principal()
+     public IActionResult Pausar()
     {
         return View();
     }
-
-
 
 }

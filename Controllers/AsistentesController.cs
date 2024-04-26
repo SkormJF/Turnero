@@ -65,5 +65,10 @@ public class AsistentesController : Controller
     {
         return View();
     }
+    public IActionResult Principal()
+    {
+        return View();
+    }
 }
+
 

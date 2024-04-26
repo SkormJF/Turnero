@@ -1,11 +1,10 @@
 <div class="row">
-<div class="col-sm-6">
-    <button style="margin-top: 30px; margin-bottom: 45px;">Gestión de turnos y citas</button>
+    <div class="d-flex justify-content-between p-2 m-4">
+        <a type="button" style="margin-top: 30px; margin-bottom: 45px;" class="btn  bt1 btn-sm btn-primary shadow" asp-controller="Asistentes" asp-action="Principal">Gestión de turnos y citas</a>
+        <a type="button" style="margin-top: 30px; margin-bottom: 45px;" class="btn  bt2 btn-sm btn-outline-dark shadow" asp-controller="Asistentes" asp-action=""> Historial de turno</a>
+    </div>
 </div>
-<div class="col-sm-6">
-    <button class="marginf" style="margin-top: 30px; margin-bottom: 45px;">Historial de turnos</button>
-</div>
-</div>
+
 
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
     <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
@@ -89,8 +88,12 @@
     </table>
 
 <style>
-    .marginf {
-    margin-left: 485px;
+    .bt1{
+    border: 2px solid black !important;
+    
+  }
+  .bt2{
+    border: 2px solid black !important;
   }
 
   .titulo {
