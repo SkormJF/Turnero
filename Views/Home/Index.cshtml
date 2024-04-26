@@ -8,21 +8,24 @@
                     </div>
                     <img src="~/img/logo.png" alt="" width="120">
                     <h2>Ingresa el numero de documento</h2>
-                    <div class="form-group mb-2 mt-4" >
-                        <select id="" class="form-select">
-                            <option value="" disabled selected>Selecciona un tipo de documento</option>
-                            <option value="cc">Cedula de ciudadania</option>
-                            <option value="ti">Tarjeta de identidad</option>
-                            <option value="ce">Cedula de extranjeria</option>
-                            <option value="rc">Registro civil</option>
-                            <option value="pp">Pasaporte</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-2 mt-5">
-                        <input  class="form-control" placeholder="Numero de documento">
-                        <span class="text-danger"></span>
-                    </div>
-                    <button type="button" class="btn btn-primary mt-5">Ingresar</button
+                    <form asp-controller="Home" asp-action="Categorias" method="post">
+                        <div class="form-group mb-2 mt-4" >
+                            <select name="tipo" class="form-select">
+                                <option value="" disabled selected>Selecciona un tipo de documento</option>
+                                <option value="CC">Cedula de ciudadania</option>
+                                <option value="TI">Tarjeta de identidad</option>
+                                <option value="CE">Cedula de extranjeria</option>
+                                <option value="RC">Registro civil</option>
+                                <option value="PP">Pasaporte</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group mb-2 mt-5">
+                            <input  name="documento" class="form-control" placeholder="Numero de documento">
+                            <span class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-5">Ingresar</button
+                    </form>
                 </div>
             </div>
         </div>
