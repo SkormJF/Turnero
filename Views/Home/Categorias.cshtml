@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-6">
-    <h5>CC-1095487456</h5>
+    <h5>@ViewData["informacion"]</h5>
   </div>
   <div class="col-sm-6">
     <h5 class="marginf">24 abril 2024 08:20:56 AM</h5>
@@ -13,7 +13,7 @@
   @foreach (var categoria in Model)
   {
 
-    <a asp-controller="Home" asp-action="Turno" asp-route-siglas="@categoria.Siglas" class="card bg-secondary">
+    <a asp-controller="Home" asp-action="Turno" asp-route-siglas="@categoria.Siglas" class="card bg-info text-white nav-link">
       <div class="cards card-body">
         <h5 class="card-title">@categoria.Nombre</h5>
 
@@ -21,7 +21,6 @@
     </a>
 
   }
-
 </div>
 
 
