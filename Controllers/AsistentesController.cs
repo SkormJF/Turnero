@@ -51,7 +51,8 @@ public class AsistentesController : Controller
         ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos");
         return View("Index");
     }
-      public async Task<IActionResult> Principal()
+    
+    public IActionResult Todos()
     {
        /* var resultTurnos = await _context.Turnos.ToListAsync();
         ViewBag.Total = resultTurnos.Where(t => t.Estado.Equals("En Espera")).Count();  */
@@ -62,4 +63,19 @@ public class AsistentesController : Controller
     
         return View();
     }
+
+    public IActionResult Pendientes()
+    {
+        return View();
+    }
+    public IActionResult Finalizados()
+    {
+        return View();
+    }
+    public IActionResult Principal()
+    {
+        return View();
+    }
 }
+
+
