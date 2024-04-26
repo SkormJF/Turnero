@@ -24,31 +24,5 @@ public class AsistentesController : Controller
     {
         _context = context;
     }
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Login(string correo, string password)
-    {
-        var asistente = await _context.Asistentes.FirstOrDefaultAsync(u => u.Correo == correo);
-        if (asistente != null && asistente.Password == password)
-        {
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, asistente.Correo),
-            };
-
-            var asistenteIdentity = new ClaimsIdentity(claims, "login");
-
-            var main = new ClaimsPrincipal(asistenteIdentity);
-            HttpContext.Response.Cookies.Append("Asistente_Id", asistente.Id.ToString());
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, main);
-            return RedirectToAction("Index", "Home");
-        }
-        ModelState.AddModelError(string.Empty, "Correo o contraseña incorrectos");
-        return View("Index");
-    }
+    
 }
