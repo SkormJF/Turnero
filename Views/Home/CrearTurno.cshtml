@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h4>HOSPITAL LA MISERICORDIA</h4>
                         <input type="hidden" asp-for="TipoDocumento" id="tipo" name="TipoDocumento" class="card-text " value='@ViewData["tipo"]' />
-                        <input type="hidden" asp-for="Identificacion" id="documento" name="Identificacion" class="card-text" value='@ViewData["documento"]' /><br>
+                        <input type="hidden" asp-for="identificacion" id="documento" name="Identificacion" class="card-text" value='@ViewData["documento"]' /><br>
                         <input type="hidden" asp-for="Ficho" id="turno" name="ficho" class="card-text" value='@ViewData["turno"]' />
                         <p class="card-text">@ViewData["tipo"] - @ViewData["documento"]</p>
                         <h1 class="card-title">@ViewData["turno"]</h1>
