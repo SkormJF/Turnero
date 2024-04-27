@@ -45,8 +45,6 @@ public class HomeController : Controller
         string turno = "";
         var result = await _context.Categorias.FirstOrDefaultAsync(c => c.Siglas == siglas);
         int contador = result.Contador +1;
-            //holaaaaaaaaaaaaaaa
-            //holaaaaaaaaaaaaaaa
         turno = siglas+"-"+(contador < 10 ? "00"+contador: "0"+contador);
 
         ViewData["turno"] = turno;
