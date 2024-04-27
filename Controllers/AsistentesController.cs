@@ -52,15 +52,15 @@ public class AsistentesController : Controller
         return View("Index");
     }
     
-    public IActionResult Todos()
-    {
-        return View();
-    }
+        public async Task<IActionResult> Todos(){
+            return View(await _context.Turnos.ToListAsync());
+        }
 
-    public IActionResult Pendientes()
-    {
-        return View();
-    }
+        public async Task<IActionResult> Pendientes(){
+            return View(await _context.Asistentes.ToListAsync());
+        }
+
+
     public IActionResult Finalizados()
     {
         return View();
